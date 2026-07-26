@@ -1,0 +1,101 @@
+pair_id,scope_type,context,target,surprisal_score_qwen,surprisal_score_gemma,surprisal_score_mistral
+1,Distributive (Multiple),"A group of children went to the park. Each child found a different massive tree they liked. Therefore, ",every child climbed a tree.,23.0,28.5,22.125
+1,Cumulative (Single),"A group of children went to the park. There was only one massive tree in the center. Therefore, ",every child climbed a tree.,27.75,32.0,21.25
+2,Distributive (Multiple),"A group of children went to the park. Each child found a different huge tree they liked. Therefore, ",every child climbed a tree.,22.875,28.375,22.0
+2,Cumulative (Single),"A group of children went to the park. There was only one huge tree in the center. Therefore, ",every child climbed a tree.,26.25,30.5,21.0
+3,Distributive (Multiple),"A group of children went to the park. Each child found a different gigantic tree they liked. Therefore, ",every child climbed a tree.,23.625,29.125,21.25
+3,Cumulative (Single),"A group of children went to the park. There was only one gigantic tree in the center. Therefore, ",every child climbed a tree.,25.25,30.5,23.0
+4,Distributive (Multiple),"A group of children went to the park. Each child found a different large tree they liked. Therefore, ",every child climbed a tree.,22.875,28.125,23.375
+4,Cumulative (Single),"A group of children went to the park. There was only one large tree in the center. Therefore, ",every child climbed a tree.,24.875,28.75,22.875
+5,Distributive (Multiple),"A group of children went to the park. Each child found a different enormous tree they liked. Therefore, ",every child climbed a tree.,23.25,28.375,21.375
+5,Cumulative (Single),"A group of children went to the park. There was only one enormous tree in the center. Therefore, ",every child climbed a tree.,25.5,29.25,22.0
+6,Distributive (Multiple),"A group of dogs went to the yard. Each dog found a different massive bone they liked. Therefore, ",every dog chewed a bone.,26.625,32.5,20.0
+6,Cumulative (Single),"A group of dogs went to the yard. There was only one massive bone in the center. Therefore, ",every dog chewed a bone.,36.5,36.25,29.75
+7,Distributive (Multiple),"A group of dogs went to the yard. Each dog found a different huge bone they liked. Therefore, ",every dog chewed a bone.,27.75,32.25,20.25
+7,Cumulative (Single),"A group of dogs went to the yard. There was only one huge bone in the center. Therefore, ",every dog chewed a bone.,36.5,35.75,29.5
+8,Distributive (Multiple),"A group of dogs went to the yard. Each dog found a different gigantic bone they liked. Therefore, ",every dog chewed a bone.,27.125,32.75,21.0
+8,Cumulative (Single),"A group of dogs went to the yard. There was only one gigantic bone in the center. Therefore, ",every dog chewed a bone.,35.25,36.0,29.125
+9,Distributive (Multiple),"A group of dogs went to the yard. Each dog found a different large bone they liked. Therefore, ",every dog chewed a bone.,26.5,31.75,21.625
+9,Cumulative (Single),"A group of dogs went to the yard. There was only one large bone in the center. Therefore, ",every dog chewed a bone.,33.25,35.0,29.75
+10,Distributive (Multiple),"A group of dogs went to the yard. Each dog found a different enormous bone they liked. Therefore, ",every dog chewed a bone.,28.75,32.25,21.25
+10,Cumulative (Single),"A group of dogs went to the yard. There was only one enormous bone in the center. Therefore, ",every dog chewed a bone.,38.0,36.0,28.625
+11,Distributive (Multiple),"A group of students went to the library. Each student found a different massive book they liked. Therefore, ",every student read a book.,20.75,24.125,23.5
+11,Cumulative (Single),"A group of students went to the library. There was only one massive book in the center. Therefore, ",every student read a book.,30.375,27.125,25.25
+12,Distributive (Multiple),"A group of students went to the library. Each student found a different huge book they liked. Therefore, ",every student read a book.,20.125,24.125,24.125
+12,Cumulative (Single),"A group of students went to the library. There was only one huge book in the center. Therefore, ",every student read a book.,29.875,27.0,25.25
+13,Distributive (Multiple),"A group of students went to the library. Each student found a different gigantic book they liked. Therefore, ",every student read a book.,21.625,24.625,23.875
+13,Cumulative (Single),"A group of students went to the library. There was only one gigantic book in the center. Therefore, ",every student read a book.,29.125,27.0,25.625
+14,Distributive (Multiple),"A group of students went to the library. Each student found a different large book they liked. Therefore, ",every student read a book.,20.75,23.75,24.0
+14,Cumulative (Single),"A group of students went to the library. There was only one large book in the center. Therefore, ",every student read a book.,27.875,26.25,23.875
+15,Distributive (Multiple),"A group of students went to the library. Each student found a different enormous book they liked. Therefore, ",every student read a book.,22.0,24.25,22.875
+15,Cumulative (Single),"A group of students went to the library. There was only one enormous book in the center. Therefore, ",every student read a book.,28.875,27.25,25.625
+16,Distributive (Multiple),"A group of cats went to the house. Each cat found a different massive mouse they liked. Therefore, ",every cat chased a mouse.,29.875,28.0,21.75
+16,Cumulative (Single),"A group of cats went to the house. There was only one massive mouse in the center. Therefore, ",every cat chased a mouse.,30.125,29.375,21.0
+17,Distributive (Multiple),"A group of cats went to the house. Each cat found a different huge mouse they liked. Therefore, ",every cat chased a mouse.,33.0,28.25,21.0
+17,Cumulative (Single),"A group of cats went to the house. There was only one huge mouse in the center. Therefore, ",every cat chased a mouse.,30.125,29.25,21.125
+18,Distributive (Multiple),"A group of cats went to the house. Each cat found a different gigantic mouse they liked. Therefore, ",every cat chased a mouse.,32.25,30.0,21.125
+18,Cumulative (Single),"A group of cats went to the house. There was only one gigantic mouse in the center. Therefore, ",every cat chased a mouse.,28.5,30.125,20.25
+19,Distributive (Multiple),"A group of cats went to the house. Each cat found a different large mouse they liked. Therefore, ",every cat chased a mouse.,29.5,26.375,22.0
+19,Cumulative (Single),"A group of cats went to the house. There was only one large mouse in the center. Therefore, ",every cat chased a mouse.,28.625,27.875,20.5
+20,Distributive (Multiple),"A group of cats went to the house. Each cat found a different enormous mouse they liked. Therefore, ",every cat chased a mouse.,31.125,28.125,21.875
+20,Cumulative (Single),"A group of cats went to the house. There was only one enormous mouse in the center. Therefore, ",every cat chased a mouse.,30.375,30.25,20.625
+21,Distributive (Multiple),"A group of workers went to the office. Each worker found a different massive desk they liked. Therefore, ",every worker cleaned a desk.,38.5,34.0,27.625
+21,Cumulative (Single),"A group of workers went to the office. There was only one massive desk in the center. Therefore, ",every worker cleaned a desk.,41.5,37.75,31.5
+22,Distributive (Multiple),"A group of workers went to the office. Each worker found a different huge desk they liked. Therefore, ",every worker cleaned a desk.,38.5,34.0,26.25
+22,Cumulative (Single),"A group of workers went to the office. There was only one huge desk in the center. Therefore, ",every worker cleaned a desk.,40.5,37.75,30.875
+23,Distributive (Multiple),"A group of workers went to the office. Each worker found a different gigantic desk they liked. Therefore, ",every worker cleaned a desk.,37.25,34.75,27.75
+23,Cumulative (Single),"A group of workers went to the office. There was only one gigantic desk in the center. Therefore, ",every worker cleaned a desk.,38.0,37.5,31.625
+24,Distributive (Multiple),"A group of workers went to the office. Each worker found a different large desk they liked. Therefore, ",every worker cleaned a desk.,39.0,34.0,29.0
+24,Cumulative (Single),"A group of workers went to the office. There was only one large desk in the center. Therefore, ",every worker cleaned a desk.,40.75,37.5,31.75
+25,Distributive (Multiple),"A group of workers went to the office. Each worker found a different enormous desk they liked. Therefore, ",every worker cleaned a desk.,37.5,34.25,27.125
+25,Cumulative (Single),"A group of workers went to the office. There was only one enormous desk in the center. Therefore, ",every worker cleaned a desk.,40.75,37.75,31.125
+26,Distributive (Multiple),"A group of birds went to the forest. Each bird found a different massive branch they liked. Therefore, ",every bird landed on a branch.,28.625,26.875,19.25
+26,Cumulative (Single),"A group of birds went to the forest. There was only one massive branch in the center. Therefore, ",every bird landed on a branch.,28.75,25.75,21.125
+27,Distributive (Multiple),"A group of birds went to the forest. Each bird found a different huge branch they liked. Therefore, ",every bird landed on a branch.,29.875,26.75,19.5
+27,Cumulative (Single),"A group of birds went to the forest. There was only one huge branch in the center. Therefore, ",every bird landed on a branch.,27.625,26.125,22.75
+28,Distributive (Multiple),"A group of birds went to the forest. Each bird found a different gigantic branch they liked. Therefore, ",every bird landed on a branch.,32.0,27.875,19.625
+28,Cumulative (Single),"A group of birds went to the forest. There was only one gigantic branch in the center. Therefore, ",every bird landed on a branch.,26.5,27.125,21.25
+29,Distributive (Multiple),"A group of birds went to the forest. Each bird found a different large branch they liked. Therefore, ",every bird landed on a branch.,26.25,25.0,20.125
+29,Cumulative (Single),"A group of birds went to the forest. There was only one large branch in the center. Therefore, ",every bird landed on a branch.,28.125,24.375,23.75
+30,Distributive (Multiple),"A group of birds went to the forest. Each bird found a different enormous branch they liked. Therefore, ",every bird landed on a branch.,30.125,26.375,19.375
+30,Cumulative (Single),"A group of birds went to the forest. There was only one enormous branch in the center. Therefore, ",every bird landed on a branch.,27.125,26.75,21.375
+31,Distributive (Multiple),"A group of tourists went to the museum. Each tourist found a different massive statue they liked. Therefore, ",every tourist photographed a statue.,29.75,35.25,24.375
+31,Cumulative (Single),"A group of tourists went to the museum. There was only one massive statue in the center. Therefore, ",every tourist photographed a statue.,35.0,37.0,26.0
+32,Distributive (Multiple),"A group of tourists went to the museum. Each tourist found a different huge statue they liked. Therefore, ",every tourist photographed a statue.,29.375,35.5,24.625
+32,Cumulative (Single),"A group of tourists went to the museum. There was only one huge statue in the center. Therefore, ",every tourist photographed a statue.,34.75,36.75,26.125
+33,Distributive (Multiple),"A group of tourists went to the museum. Each tourist found a different gigantic statue they liked. Therefore, ",every tourist photographed a statue.,28.625,37.25,24.25
+33,Cumulative (Single),"A group of tourists went to the museum. There was only one gigantic statue in the center. Therefore, ",every tourist photographed a statue.,34.25,37.75,26.875
+34,Distributive (Multiple),"A group of tourists went to the museum. Each tourist found a different large statue they liked. Therefore, ",every tourist photographed a statue.,27.0,34.0,24.875
+34,Cumulative (Single),"A group of tourists went to the museum. There was only one large statue in the center. Therefore, ",every tourist photographed a statue.,35.0,36.5,26.5
+35,Distributive (Multiple),"A group of tourists went to the museum. Each tourist found a different enormous statue they liked. Therefore, ",every tourist photographed a statue.,27.25,35.75,24.375
+35,Cumulative (Single),"A group of tourists went to the museum. There was only one enormous statue in the center. Therefore, ",every tourist photographed a statue.,35.25,37.25,26.375
+36,Distributive (Multiple),"A group of chefs went to the kitchen. Each chef found a different massive pan they liked. Therefore, ",every chef washed a pan.,31.375,35.25,29.25
+36,Cumulative (Single),"A group of chefs went to the kitchen. There was only one massive pan in the center. Therefore, ",every chef washed a pan.,51.75,37.0,27.5
+37,Distributive (Multiple),"A group of chefs went to the kitchen. Each chef found a different huge pan they liked. Therefore, ",every chef washed a pan.,31.75,35.0,29.0
+37,Cumulative (Single),"A group of chefs went to the kitchen. There was only one huge pan in the center. Therefore, ",every chef washed a pan.,52.75,36.5,27.875
+38,Distributive (Multiple),"A group of chefs went to the kitchen. Each chef found a different gigantic pan they liked. Therefore, ",every chef washed a pan.,30.875,36.25,28.75
+38,Cumulative (Single),"A group of chefs went to the kitchen. There was only one gigantic pan in the center. Therefore, ",every chef washed a pan.,53.25,37.0,26.875
+39,Distributive (Multiple),"A group of chefs went to the kitchen. Each chef found a different large pan they liked. Therefore, ",every chef washed a pan.,31.875,35.0,30.0
+39,Cumulative (Single),"A group of chefs went to the kitchen. There was only one large pan in the center. Therefore, ",every chef washed a pan.,49.75,35.5,26.5
+40,Distributive (Multiple),"A group of chefs went to the kitchen. Each chef found a different enormous pan they liked. Therefore, ",every chef washed a pan.,30.625,34.75,29.125
+40,Cumulative (Single),"A group of chefs went to the kitchen. There was only one enormous pan in the center. Therefore, ",every chef washed a pan.,53.25,36.25,27.5
+41,Distributive (Multiple),"A group of monkeys went to the jungle. Each monkey found a different massive banana they liked. Therefore, ",every monkey ate a banana.,25.625,21.25,19.625
+41,Cumulative (Single),"A group of monkeys went to the jungle. There was only one massive banana in the center. Therefore, ",every monkey ate a banana.,31.875,25.125,26.75
+42,Distributive (Multiple),"A group of monkeys went to the jungle. Each monkey found a different huge banana they liked. Therefore, ",every monkey ate a banana.,25.375,21.125,19.75
+42,Cumulative (Single),"A group of monkeys went to the jungle. There was only one huge banana in the center. Therefore, ",every monkey ate a banana.,30.0,25.375,28.0
+43,Distributive (Multiple),"A group of monkeys went to the jungle. Each monkey found a different gigantic banana they liked. Therefore, ",every monkey ate a banana.,25.125,21.875,19.75
+43,Cumulative (Single),"A group of monkeys went to the jungle. There was only one gigantic banana in the center. Therefore, ",every monkey ate a banana.,31.5,25.625,28.125
+44,Distributive (Multiple),"A group of monkeys went to the jungle. Each monkey found a different large banana they liked. Therefore, ",every monkey ate a banana.,25.75,20.875,20.625
+44,Cumulative (Single),"A group of monkeys went to the jungle. There was only one large banana in the center. Therefore, ",every monkey ate a banana.,30.0,25.75,28.5
+45,Distributive (Multiple),"A group of monkeys went to the jungle. Each monkey found a different enormous banana they liked. Therefore, ",every monkey ate a banana.,25.875,21.125,18.875
+45,Cumulative (Single),"A group of monkeys went to the jungle. There was only one enormous banana in the center. Therefore, ",every monkey ate a banana.,30.75,26.0,27.625
+46,Distributive (Multiple),"A group of artists went to the studio. Each artist found a different massive canvas they liked. Therefore, ",every artist painted a canvas.,29.375,29.625,21.0
+46,Cumulative (Single),"A group of artists went to the studio. There was only one massive canvas in the center. Therefore, ",every artist painted a canvas.,35.25,31.75,23.375
+47,Distributive (Multiple),"A group of artists went to the studio. Each artist found a different huge canvas they liked. Therefore, ",every artist painted a canvas.,29.375,29.625,21.125
+47,Cumulative (Single),"A group of artists went to the studio. There was only one huge canvas in the center. Therefore, ",every artist painted a canvas.,35.0,30.875,23.375
+48,Distributive (Multiple),"A group of artists went to the studio. Each artist found a different gigantic canvas they liked. Therefore, ",every artist painted a canvas.,28.0,30.125,21.125
+48,Cumulative (Single),"A group of artists went to the studio. There was only one gigantic canvas in the center. Therefore, ",every artist painted a canvas.,34.0,31.75,23.75
+49,Distributive (Multiple),"A group of artists went to the studio. Each artist found a different large canvas they liked. Therefore, ",every artist painted a canvas.,30.25,29.375,22.125
+49,Cumulative (Single),"A group of artists went to the studio. There was only one large canvas in the center. Therefore, ",every artist painted a canvas.,34.0,29.875,23.375
+50,Distributive (Multiple),"A group of artists went to the studio. Each artist found a different enormous canvas they liked. Therefore, ",every artist painted a canvas.,30.125,29.5,21.125
+50,Cumulative (Single),"A group of artists went to the studio. There was only one enormous canvas in the center. Therefore, ",every artist painted a canvas.,33.5,31.875,22.875
