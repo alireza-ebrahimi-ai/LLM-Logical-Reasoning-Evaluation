@@ -1,54 +1,100 @@
-# Do LLMs Really "Reason" or Just Mimic? A Falsifiable Neuro-Symbolic Framework
+# The Illusion of Inference: A Neuro-Symbolic Falsification of LLM Reasoning
 
-![Python](https://img.shields.io/badge/python-3.8%2B-blue)
-![Kaggle](https://img.shields.io/badge/Environment-Kaggle-20BEFF)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-orange)
 ![Z3 Solver](https://img.shields.io/badge/Formal_Verification-Z3_SMT_Solver-red)
+![Kaggle](https://img.shields.io/badge/Environment-Kaggle_T4x2_GPU-20BEFF)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ## Overview
-This repository contains the codebase, datasets, and experimental results for the final project in the Expert Systems course. The project investigates a fundamental question in modern Artificial Intelligence: **Do Large Language Models (LLMs) perform actual logical deduction, or do they merely reproduce statistical linguistic patterns?**
+This repository contains the full source code, datasets, formal verification scripts, and experimental results for the final project in the **Advanced Expert Systems** course at **Yazd University**. 
 
-To answer this, we introduce a falsifiable, neuro-symbolic evaluation framework that tests LLMs against First-Order Logic (FOL) principles, strictly separating statistical language errors from true systematic logic errors.
+The study investigates a fundamental question in modern Artificial Intelligence: **Do Large Language Models (LLMs) execute genuine deductive reasoning, or do they merely mimic statistical token patterns?**
 
-## Core Hypotheses
-This project designs and executes a rigorous experimental pipeline to test two specific hypotheses:
+To answer this, we establish a falsifiable neuro-symbolic framework combining natural language semantic neutralization, SMT theorem proving with the **Z3 Solver**, and raw PyTorch token surprisal extraction across three distinct model families.
 
-*   **H1 (Effect of Surface-level Perturbations):** The logical reasoning performance of LLMs drops significantly when evaluating logically equivalent inferences that have altered surface structures (e.g., replacing real-world entities with nonsense/neutral words to eliminate the effect of prior knowledge, or permuting the order of premises).
-*   **H2 (Quantifier Scoping Failures):** LLMs systematically fail to distinguish between formulations with swapped quantifiers (e.g., $\forall x \exists y$ versus $\exists y \forall x$) that possess nearly identical surface linguistic structures.
+---
 
-## System Architecture
-The evaluation pipeline is divided into three main phases:
+## Key Empirical Findings
 
-1.  **Neutral Dataset Generation (The "Caroline" Filter):** Automatically replacing entities, verbs, and nouns in standard logical datasets (e.g., FOLIO) with synthetic tokens to neutralize inherent cognitive biases.
-2.  **LLM Inference & Surprisal Analysis:** Querying models and using tools like `minicons` to calculate token surprisal rates, isolating random statistical noise from systematic behavior.
-3.  **Formal Verification (Z3 Prover):** Translating the intermediate reasoning steps of the LLM into Python-executable First-Order Logic formulas and verifying them using the **Z3 SMT Solver** ($M \models \alpha$).
+### 1. Hypothesis 1: Invariance to Surface Perturbations (H1)
+When real-world entities in the FOLIO dataset were replaced with synthetic nonsense tokens (the "Caroline Filter"), the logical structure remained **100% mathematically invariant** (certified by Z3). However, LLM reasoning accuracy collapsed across all evaluated architectures:
+*   **Qwen2.5-7B-Instruct:** Accuracy dropped from **56.86%** to **44.61%** ($\Delta = -12.25\%$)
+*   **Gemma-2-2B-It:** Accuracy dropped from **52.45%** to **41.18%** ($\Delta = -11.27\%$)
+*   **Mistral-7B-Instruct-v0.2:** Accuracy dropped from **45.59%** to **37.75%** ($\Delta = -7.84\%$)
+
+### 2. Hypothesis 2: Systematic Quantifier Scoping (H2)
+Evaluating 50 procedurally generated minimal pairs testing quantifier scope ambiguity ($\forall x \exists y$ vs. $\exists y \forall x$) via raw conditional token surprisal ($-\log P$) revealed chaotic, non-systematic probability distributions. Models react to local token co-occurrence (lexical heuristics) rather than formal quantifier syntax.
+
+---
+
+## Evaluated LLM Families
+We benchmarked three diverse, open-weights model families on dual NVIDIA T4 GPUs:
+1.  **Qwen2.5-7B-Instruct** (Alibaba Cloud)
+2.  **Gemma-2-2B-It** (Google)
+3.  **Mistral-7B-Instruct-v0.2** (Mistral AI)
+
+---
 
 ## Repository Structure
-  /data                   --> Contains raw datasets and generated neutral datasets
-  /notebooks              --> Kaggle executable notebooks (Data generation, LLM API calls, Z3 Verification)
-  /results                --> Raw experimental logs, statistical analysis, and generated plots
-  /docs                   --> Final academic paper, presentation slides, and the AI Usage Appendix
-  README.md               --> This file
 
-## Reproducibility and Execution
-This project is designed to be fully reproducible and is optimized for the **Kaggle** environment. 
+```
+├── data/
+│   ├── folio_raw_original.jsonl           # Baseline raw FOLIO dataset
+│   ├── folio_h1_caroline.csv              # Neutralized H1 dataset (Caroline filter)
+│   ├── llm_answers_h1_qwen.csv            # H1 inference outputs (Qwen2.5)
+│   ├── llm_answers_h1_gemma.csv           # H1 inference outputs (Gemma-2)
+│   ├── llm_answers_h1_mistral.csv         # H1 inference outputs (Mistral-v0.2)
+│   ├── h2_synthetic_minimal_pairs.csv     # 50 unique minimal pairs dataset
+│   ├── surprisal_results_h2_all_models.csv# Raw PyTorch token surprisal scores
+│   └── z3_h1_proof_log.txt                # Z3 formal logic verification proof log
+├── notebooks/
+│   ├── 01_dataset_preparation_H1.ipynb    # Data downloading & Caroline NER filtering
+│   ├── 02_llm_inference_H1.ipynb          # Multi-model zero-shot H1 inference
+│   ├── 03_z3_verifier_H1.ipynb            # Z3 SMT formal proof by contradiction
+│   ├── 04_llm_surprisal_H2.ipynb          # Minimal pairs & PyTorch logit surprisal extraction
+│   └── 05_statistical_analysis.ipynb      # Statistical aggregation & Vector PDF generation
+├── results/
+│   ├── h1_accuracy_drop_all_models.pdf    # Vector PDF plot for H1 results
+│   └── h2_surprisal_inconsistency_all_models.pdf # Vector PDF plot for H2 results
+├── docs/
+│   ├── NeuroSymbolic_LLM_Reasoning_Evaluation.pdf # Main paper
+│   ├── AI_Usage_Report.tex                # Standalone AI Usage Audit Appendix
+│   └── presentation_slides.tex            # 13-slide Beamer deck for oral defense
+└── README.md                              # This documentation file
+```
 
-### Dependencies
-To run the notebooks, ensure the following packages are installed in your Kaggle environment:
-*   z3-solver
-*   minicons
-*   transformers
-*   pandas, matplotlib, seaborn (for statistical analysis)
+---
+
+## Reproducibility & Execution
+
+All experiments are fully reproducible in a standard Python / Kaggle environment.
+
+### Prerequisites
+```bash
+pip install torch transformers z3-solver spacy pandas matplotlib seaborn
+python -m spacy download en_core_web_sm
+```
 
 ### Execution Steps
-1.  Run the `01_dataset_generation.ipynb` notebook to generate the neutral and quantifier-swapped datasets.
-2.  Run the `02_llm_inference.ipynb` notebook to collect responses and calculate token probabilities.
-3.  Run the `03_z3_formal_verification.ipynb` notebook to evaluate the logical soundness of the outputs.
-4.  Run the `04_statistical_analysis.ipynb` to generate the final comparative plots and error classifications.
+1.  **Data Generation:** Run `notebooks/01_dataset_preparation_H1.ipynb` to download FOLIO and apply entity replacement.
+2.  **H1 Evaluation:** Run `notebooks/02_llm_inference_H1.ipynb` to collect model decisions across Qwen, Gemma, and Mistral.
+3.  **Formal Proof:** Run `notebooks/03_z3_verifier_H1.ipynb` to execute the Z3 SMT solver and verify logical invariance.
+4.  **H2 Surprisal:** Run `notebooks/04_llm_surprisal_H2.ipynb` to generate minimal pairs and extract PyTorch logits.
+5.  **Plot Generation:** Run `notebooks/05_statistical_analysis.ipynb` to generate the publication-ready vector PDF figures.
 
-## Academic Integrity & AI Usage
-In compliance with the course policies, all commits in this repository reflect the incremental progress of the project. A detailed appendix regarding the transparent use of AI-assisted tools for code generation and text editing is included in the `/docs` directory.
+---
 
-## References
-This framework builds upon state-of-the-art neuro-symbolic research, including:
-*   *FoVer: First-Order Logic Verification for Natural Language Reasoning*
-*   *Evaluating the Robustness of Analogical Reasoning in Large Language Models*
+## Authors & Citation
+
+*   **Alireza Ebrahimi** - Department of Computer Science, Yazd University (`alireza.ebrahimi@stu.yazd.ac.ir`)
+*   **Jamal Zarepour-Ahmadabadi** (Instructor) - Department of Computer Science, Yazd University (`zarepourjamal@yazd.ac.ir`)
+
+```bibtex
+@article{ebrahimi2026illusion,
+  title={The Illusion of Inference: A Neuro-Symbolic Falsification of LLM Reasoning via Formal Verification and Token Surprisal},
+  author={Ebrahimi, Alireza and Zarepour-Ahmadabadi, Jamal},
+  journal={Expert Systems with Applications (Under Review)},
+  year={2026}
+}
+```
