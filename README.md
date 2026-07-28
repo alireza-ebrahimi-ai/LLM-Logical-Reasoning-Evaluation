@@ -59,8 +59,8 @@ We benchmarked three diverse, open-weights model families on dual NVIDIA T4 GPUs
 │   └── h2_surprisal_inconsistency_all_models.pdf # Vector PDF plot for H2 results
 ├── docs/
 │   ├── NeuroSymbolic_LLM_Reasoning_Evaluation.pdf # Main paper
-│   ├── AI_Usage_Report.tex                # Standalone AI Usage Audit Appendix
-│   └── presentation_slides.tex            # 13-slide Beamer deck for oral defense
+│   ├── AI_Usage_Report.pdf                # Standalone AI Usage Audit Appendix
+│   └── presentation_slides.pdf            # 13-slide Beamer deck for oral defense
 └── README.md                              # This documentation file
 ```
 
