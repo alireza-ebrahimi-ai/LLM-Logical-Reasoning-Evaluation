@@ -1,4 +1,0 @@
-Z3 Original Result: True (Entailed)
-Z3 Caroline Result: True (Entailed)
-LLM Original: True | LLM Caroline: False
-Conclusion: Logic is invariant to symbol grounding, but LLMs are not.
